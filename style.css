@@ -14,6 +14,15 @@
 }
 body{
     background: var(--pure);
+    font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position: auto;
+            height: 100vh;
+            display: block;
+            justify-content: center;
+            align-items: center;
 }
 .container{
     padding: 100px 200px;
