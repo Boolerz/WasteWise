@@ -52,7 +52,7 @@ li{
 header{
     padding: 0 200px;
     background-color: #f0b012;
-    background-image: url("./header-bg.png");
+    background-image: url("/header-bg.png");
     height: 100vh;
 }
 .navbar{
