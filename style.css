@@ -60,7 +60,7 @@ li{
 /* ====header-section== */
 header{
     padding: 0 200px;
-    background-color: #f0b012;
+    background-color: #076b0b;
     background-image: url(header-bg.png);
     height: 100vh;
 }
@@ -96,30 +96,32 @@ header{
 }
 .header-text .banner-text{
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 900;
     letter-spacing: 1px;
-    color: var(--back);
+    color: var(--green);
     text-transform: uppercase;
+    color: #076b0b;
 }
 .header-title{
     font-size: 45px;
     letter-spacing: 1px;
     font-weight: 800;
     margin-bottom: 10px;
-    color: var(--back);
+    color: var(--green);
     text-transform: uppercase;
+    color: #076b0b;
 }
 .header-text p{
     font-size: 16px;
     margin-bottom: 30px;
-    color: var(--gray);
+    color: var(--green);
 }
 .btn{
     outline: none;
     border: 2px solid var(--secondary);
     color: var(--pure);
     padding: 10px 30px;
-    background-color: var(--back);
+    background-color: #182c03;
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
@@ -600,4 +602,27 @@ footer{
 }
 .f-item4 div img{
     width: 100%;
+}
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    height: 90px;
+}
+ .cart span{
+    display: flex;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    right: 72px;
 }

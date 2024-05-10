@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management App</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      .barcode-scanner {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type="text"] {
+        width: 60%;
+        padding: 5px;
+        margin: 5px;
+      }
+      
+      button {
+        padding: 8px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      .product-info {
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      
+  </style>
+</head>
+<body>
+    <header>
+         <nav class="navbar">
+                <img src="logo.JPG" alt="logo">
+                <ul class="nav-menu">
+                    <li class="item"><a href="index.html" class="item-link">home</a></li>
+                    <li class="item"><a href="status.html" class="item-link">Explore Bin</a></li>
+                    <li class="item"><a href="regist.html" class="item-link">Register with us</a></li>
+                    <li class="item"><a href="contact.html" class="item-link">contact</a></li>
+                    <li><a href="" class="item-link"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </nav>
+            <aside id="cart" class="cart">
+                <img src="icons/cart.png" alt="cart">
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+        <span id="cart-total">0</span>
+        <a href="check.html"><button onclick="check()">Check</button></a>
+        </aside>
+  <div class="container">
+    <h1>Waste Management App</h1>
+    <div class="barcode-scanner">
+      <label for="barcode-input">Scan Content:</label>
+      <input type="text" id="barcode-input" placeholder="Enter barcode...">
+      <button onclick="scanBarcode()">Scan</button>
+    </div>
+    <div class="product-info" id="product-info">
+      <!-- Product information will be displayed here -->
+    </div>
+  </div>
+</header>
+    <script src="check.js"></script>
+</body>
+</html>

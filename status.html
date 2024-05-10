@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Status</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #f0b012;
+    color: #fff;
+}
+
+thead th, tbody td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    table {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <img src="logo.JPG" alt="logo">
+        <ul class="nav-menu">
+            <li class="item"><a href="index.html" class="item-link">home</a></li>
+            <li class="item"><a href="status.html" class="item-link">Explore Bin</a></li>
+            <li class="item"><a href="regist.html" class="item-link">Register with us</a></li>
+            <li class="item"><a href="contact.html" class="item-link">contact</a></li>
+            <li><a href="" class="item-link"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a></li>
+        </ul>
+        <aside id="cart" class="cart">
+            <img src="icons/cart.png" alt="cart">
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+    <span id="cart-total">0</span>
+    <a href="check.html"><button onclick="check()">Check</button></a>
+    </aside>
+    </nav>
+    <h1>Bin Status in Town</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Serial Number</th>
+                <th>Fill Level</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Insert bin status dynamically using JavaScript -->
+        </tbody>
+    </table>
+</header>
+    <script src="status.js"></script>
+</body>
+</html>
