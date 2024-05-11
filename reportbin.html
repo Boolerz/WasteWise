@@ -58,6 +58,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            text-align: center;
         }
         
         button[type="submit"] {
@@ -107,12 +108,31 @@
                 <li><a href="" class="item-link"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
+        <aside id="cart" class="cart">
+            <img src="icons/cart.png" alt="cart">
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+    <span id="cart-total">0</span>
+    <a href="check.html"><button onclick="check()">Check</button></a>
+    </aside>
         <div class="container">
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" required>
-                </div>
+                    <label for="service">Select a town:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a town</option>
+                        <option value="kilifi">Kilifi</option>
+                        <option value="malindi">Malindi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="majengo">Majengo</option>
+                        <option value="mariakani">Mariakani</option>
+                        <option value="mazeras">Mazeras</option>
+                        <option value="kaloleni">Kaloleni</option>
+                        <option value="mavueni">Mavueni</option>
+                        <option value="miritini">Miritini</option>
+                        <!-- Add more service options -->
+                    </select>
                 <div class="form-group">
                     <label for="serial">Bin Serial Number:</label>
                     <input type="text" id="serial" name="serial" required>
@@ -129,6 +149,6 @@
     <footer>
         <p>&copy; 2024 WasteWise. All rights reserved.</p>
     </footer>
-
+    <script src="report.js"></script>
 </body>
 </html>

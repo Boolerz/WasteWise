@@ -36,3 +36,35 @@ function scanBarcode() {
     `;
   }
   
+  document.addEventListener("DOMContentLoaded", function() {
+    const reportedBins = [
+        { barcode: "BIN005", town: "Kilifi", serial: "BIN005", photo: "bin005.jpg" },
+        { barcode: "BIN002", town: "Malindi", serial: "BIN001", photo: "bin002.jpg" },
+        // Add more reported bins as needed
+    ];
+
+    const cartTotalSpan = document.getElementById("cart-total");
+    const checkButton = document.getElementById("check-button");
+    const reportBinForm = document.getElementById("report-bin-form");
+
+    // Display the total number of reported bins
+    cartTotalSpan.textContent = reportedBins.length;
+
+    const cartItemsList = document.getElementById("cart-items");
+
+    // Loop through reported bins and display them in the cart
+    reportedBins.forEach(bin => {
+        const li = document.createElement("li");
+        li.textContent = `Town: ${bin.town}, Serial: ${bin.serial}`;
+        cartItemsList.appendChild(li);
+    });
+
+    // Clear the notification and form when the "Check" button is clicked
+    checkButton.addEventListener("click", function() {
+        // Reset cart total
+        cartTotalSpan.textContent = "0";
+
+        // Clear form fields
+        reportBinForm.reset();
+    });
+});
