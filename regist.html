@@ -42,6 +42,7 @@
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 3px;
+        text-align: center;
     }
 
     .form-group select {
@@ -64,6 +65,20 @@
     .form-group input[type="submit"]:hover {
         background-color: #0056b3;
     }
+
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: space-between; /* Add space between items */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        margin-bottom: 10px; /* Add some margin between the checkbox group and other form elements */
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 5px; /* Add some margin between checkboxes */
+        margin-bottom: 5px; /* Add some margin below each checkbox */
+    }
+    
 </style>
 </head>
 <body>
@@ -105,6 +120,38 @@
             </select>
         </div>
         <div class="form-group">
+        <label for="service">Select Option:</label>
+            <select id="service" name="service" required>
+                <option value="">Type of Organisation</option>
+                <option value="organisation">Enterprise</option>
+                <option value="manicupality">Manicupality</option>
+                <option value="consumer">Consumer</option>
+                <option value="recycling-industry">Recycling industry</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <legend>Select type of material You dispose/recycle:</legend>
+            <fieldset>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="metals" name="service[]" value="metals">
+                    <label for="metals">Metals</label><br>
+                    
+                    <input type="checkbox" id="glass" name="service[]" value="glass">
+                    <label for="glass">Glass</label><br>
+                    
+                    <input type="checkbox" id="wood" name="service[]" value="wood">
+                    <label for="wood">Wood</label><br>
+                    
+                    <input type="checkbox" id="papers" name="service[]" value="papers">
+                    <label for="papers">Papers</label><br>
+                    
+                    <input type="checkbox" id="gabagge" name="service[]" value="gabagge">
+                    <label for="gabagge">Gabagge</label><br>
+                </div>
+            </fieldset>
+            
+
+        <div class="form-group">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
         </div>
@@ -117,27 +164,11 @@
             <input type="text" id="phone" name="phone" required>
         </div>
         <div class="form-group">
-            <label for="date">Select Date:</label>
-            <input type="date" id="date" name="date" required>
+            <label for="street">Street:</label>
+            <input type="text" id="streetr" name="street" required>
         </div>
         <div class="form-group">
-            <label for="time">Select Time:</label>
-            <input type="time" id="time" name="time" required>
-        </div>
-        <div class="form-group">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" required>
-        </div>
-        <div class="form-group">
-            <label for="appartments-number">Appartment Number:</label>
-            <input type="text" id="appartments-number" name="appartments-number" required>
-        </div>
-        <div class="form-group">
-            <label for="fees">Fees (USD):</label>
-            <input type="text" id="fees" name="fees" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message:</label>
+            <label for="message">How did you Know about us:</label>
             <textarea id="message" name="message" required></textarea>
         </div>
         <div class="form-group">
@@ -145,6 +176,6 @@
         </div>
     </form>
 </div>
-
+<script src="regist.js"></script>
 </body>
 </html>
