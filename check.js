@@ -33,9 +33,23 @@ function scanBarcode() {
       <p><strong>Name:</strong> ${productInfo.name}</p>
       <p><strong>Level:</strong> ${productInfo.level}</p>
       <p><strong>Recyclable:</strong> ${productInfo.recyclable ? 'Yes' : 'No'}</p>
+      <p><strong>Recycling Company:</strong> ${getRecyclingCompany(productInfo.name)}</p>
     `;
   }
-  
+  function getRecyclingCompany(productName) {
+    // Define a mapping of product names to recycling companies
+    var recyclingCompanies = {
+        "Glass": "Company A",
+        "Papers": "Company B",
+        "Metal": "Company C",
+        "Gabbage": "Company D",
+        "Plastic": "Company E"
+        // Add more mappings as needed
+    };
+
+    // Return the recycling company based on the product name
+    return recyclingCompanies[productName] || "Unknown";
+}
   document.addEventListener("DOMContentLoaded", function() {
     const reportedBins = [
         { barcode: "BIN005", town: "Kilifi", serial: "BIN005", photo: "bin005.jpg" },
