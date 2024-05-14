@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Redirect to index.html after 2 seconds
         setTimeout(function() {
             window.location.href = "index.html";
-        }, 2000);
+        }, 1000);
     });
 
     // Function to generate a serial number dynamically
